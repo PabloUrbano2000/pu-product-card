@@ -7,6 +7,11 @@
     "dist",
     "src"
   ],
+  "repository": {
+    "url": "https://github.com/PabloUrbano2000/pu-product-card",
+    "type": "git"
+  },
+  "homepage": "pablo-urbano.com",
   "engines": {
     "node": ">=10"
   },
@@ -14,6 +19,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
+    "test:watch": "tsdx test --watch",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
@@ -47,17 +53,37 @@
     }
   ],
   "devDependencies": {
+    "@types/react-test-renderer": "^18.3.0",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
     "@rollup/plugin-image": "^3.0.3",
     "@size-limit/preset-small-lib": "^11.1.4",
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",
+    "babel-jest": "^29.7.0",
     "husky": "^9.1.5",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-test-renderer": "^18.3.1",
     "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^11.1.4",
     "tsdx": "^0.14.1",
     "tslib": "^2.7.0",
     "typescript": "^3.9.10"
+  },
+  "keywords": [
+    "product",
+    "card",
+    "pablo",
+    "urbano"
+  ],
+  "dependencies": {},
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   }
 }
